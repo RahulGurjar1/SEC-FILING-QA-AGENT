@@ -41,6 +41,7 @@ git clone https://github.com/RahulGurjar1/SEC-FILING-QA-AGENT.git
 cd sec_filings_qa
 
 ### 2. Install Dependencies: It is recommended to use a virtual environment.
+```bash
 python -m venv venv
 source venv/bin/activate  # On Ubantu (check out if you are working on a different OS)
 pip install -r requirements.txt
