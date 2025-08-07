@@ -37,9 +37,10 @@ The system operates in two main phases:
 
 ## Process to run the Project
 ### 1. Clone the Repository
+```bash
 git clone https://github.com/RahulGurjar1/SEC-FILING-QA-AGENT.git
 cd sec_filings_qa
-
+```
 ### 2. Install Dependencies: It is recommended to use a virtual environment.
 ```bash
 python -m venv venv
