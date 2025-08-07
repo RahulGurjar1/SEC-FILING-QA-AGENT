@@ -45,26 +45,31 @@ cd sec_filings_qa
 python -m venv venv
 source venv/bin/activate  # On Ubantu (check out if you are working on a different OS)
 pip install -r requirements.txt
-
+```
 ### 3. Set Up Environment Variables
 Create a file named .env in the root of the project directory and add your API keys:
-
+```bash
 GOOGLE_API_KEY="your_google_api_key_here"
 SEC_API_KEY="your_sec_api_io_key_here"
 USER_AGENT_EMAIL="your_email@example.com" # Required by SEC for API access
-
+```
 ### 4. Run the Data Pipeline
 Execute the following scripts in order to build the vector database. This only needs to be done once.
 
 1. Download filings from sec-api.io
+```bash
 python3 scripts/downloader.py
-
+```
 2. Parse HTML files and create chunks
+```bash
 python3 scripts/parser.py
-
+```
 3. Create embeddings and index them in ChromaDB
+```bash
 python3 scripts/indexer.py
-
+```
 ### 5. Run the Streamlit Application
+```bash
 streamlit run app.py
+```
 You can now access the Q&A interface in your web browser at localhost url.
