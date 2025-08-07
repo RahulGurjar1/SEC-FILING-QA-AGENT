@@ -1,0 +1,13 @@
+beautifulsoup4
+chromadb
+google-generativeai
+langchain
+lxml
+pandas
+pyarrow
+python-dotenv
+requests
+sentence-transformers
+streamlit
+torch
+tqdm
