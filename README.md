@@ -27,33 +27,32 @@ The system operates in two main phases:
 *   **Pandas & PyArrow**: For data manipulation and storage in the Parquet format.
     *   *Why?* Parquet is a highly efficient columnar storage format that is perfect for tabular data like our processed text chunks.
 
-## How to Run
 
-### Prerequisites
+## Prerequisites
 
 *   Python 3.8+
 *   API keys for:
     *   Google AI (for Gemini)
     *   SEC-API.io
 
-### Process to run the Project
-# 1. Clone the Repository
+## Process to run the Project
+### 1. Clone the Repository
 git clone https://github.com/RahulGurjar1/SEC-FILING-QA-AGENT.git
 cd sec_filings_qa
 
-# 2. Install Dependencies: It is recommended to use a virtual environment.
+### 2. Install Dependencies: It is recommended to use a virtual environment.
 python -m venv venv
 source venv/bin/activate  # On Ubantu (check out if you are working on a different OS)
 pip install -r requirements.txt
 
-# 3. Set Up Environment Variables
+### 3. Set Up Environment Variables
 Create a file named .env in the root of the project directory and add your API keys:
 
 GOOGLE_API_KEY="your_google_api_key_here"
 SEC_API_KEY="your_sec_api_io_key_here"
 USER_AGENT_EMAIL="your_email@example.com" # Required by SEC for API access
 
-# 4. Run the Data Pipeline
+### 4. Run the Data Pipeline
 Execute the following scripts in order to build the vector database. This only needs to be done once.
 
 1. Download filings from sec-api.io
@@ -65,6 +64,6 @@ python3 scripts/parser.py
 3. Create embeddings and index them in ChromaDB
 python3 scripts/indexer.py
 
-# 5. Run the Streamlit Application
+### 5. Run the Streamlit Application
 streamlit run app.py
 You can now access the Q&A interface in your web browser at localhost url.
